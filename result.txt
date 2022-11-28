@@ -1,0 +1,600 @@
+{
+    "amazon.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "Server (Amazon)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670561.2761452,
+        "tls_versions": []
+    },
+    "asee.org": {
+        "geo_locations": [
+            "Chicago, United States",
+            "New_York, United States"
+        ],
+        "hsts": false,
+        "http_server": null,
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "20.49.104.48"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670632.4894767,
+        "tls_versions": []
+    },
+    "auditoryneuroscience.com": {
+        "geo_locations": [
+            "Chicago, United States",
+            "Hong_Kong, Hong Kong"
+        ],
+        "hsts": false,
+        "http_server": "Apache/2.4.54 (Ubuntu) (Auditoryneuroscience)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "144.214.26.111"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "twinkle.bms.cityu.edu.hk"
+        ],
+        "redirect_to_https": false,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670626.0106921,
+        "tls_versions": []
+    },
+    "clocktab.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "cloudflare (Clocktab)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670623.97733,
+        "tls_versions": []
+    },
+    "en.wikipedia.org": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "Varnish (En)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "208.80.154.224"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "text-lb.eqiad.wikimedia.org"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670550.6480706,
+        "tls_versions": []
+    },
+    "facebook.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "proxygen-bolt (Facebook)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "157.240.249.35"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "edge-star-mini-shv-01-ord5.facebook.com"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670560.1198392,
+        "tls_versions": []
+    },
+    "fandom.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Varnish (Fandom)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670575.64817,
+        "tls_versions": []
+    },
+    "gradeinflation.com": {
+        "geo_locations": [
+            "Chicago, United States",
+            "Vancouver, Canada"
+        ],
+        "hsts": false,
+        "http_server": "nginx (Gradeinflation)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "51.79.45.180"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "gw1.ahs5.r4l.com"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670634.0286453,
+        "tls_versions": []
+    },
+    "illinois.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache/2.2.15 (Red Hat) mod_ssl/2.2.15 OpenSSL/1.0.1e-fips (Illinois)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "192.17.172.3"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "tardis.techservices.illinois.edu"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670616.9339416,
+        "tls_versions": []
+    },
+    "imdb.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "Server (Imdb)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670574.5263243,
+        "tls_versions": []
+    },
+    "instagram.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "proxygen-bolt (Instagram)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "157.240.249.174"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "instagram-p42-shv-01-ord5.fbcdn.net"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670590.923779,
+        "tls_versions": []
+    },
+    "it.eecs.northwestern.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k (It)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "129.105.5.142"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "it.ece.northwestern.edu"
+        ],
+        "redirect_to_https": false,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670605.0085094,
+        "tls_versions": []
+    },
+    "kellogg.northwestern.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Microsoft-IIS/10.0 (Kellogg)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "165.124.147.150"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "kelloggalumni.kellogg.northwestern.edu"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670603.303546,
+        "tls_versions": []
+    },
+    "kli.org": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "LiteSpeed (Kli)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "20.127.141.51"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670642.4381719,
+        "tls_versions": []
+    },
+    "mccormick.northwestern.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache/2.4.41 (Ubuntu) (Mccormick)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "165.124.149.20"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "davinci20.tech.northwestern.edu"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670600.9092796,
+        "tls_versions": []
+    },
+    "northwestern.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "BigIP (Northwestern)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "129.105.136.48"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "evcommon-caesar-vip.northwestern.edu"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670599.2980413,
+        "tls_versions": []
+    },
+    "pinterest.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": null,
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": false,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670577.994928,
+        "tls_versions": []
+    },
+    "pmichaud.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache (Pmichaud)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "23.254.203.248"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "hwsrv-233708.hostwindsdns.com"
+        ],
+        "redirect_to_https": false,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670636.3797438,
+        "tls_versions": []
+    },
+    "reddit.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "snooserv (Reddit)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670571.2636237,
+        "tls_versions": []
+    },
+    "spacejam.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "Apache/2.4.54 () OpenSSL/1.0.2k-fips (Spacejam)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670635.2644076,
+        "tls_versions": []
+    },
+    "stevetarzia.com": {
+        "geo_locations": [
+            "Chicago, United States",
+            "New_York, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache/2.4.52 () OpenSSL/1.0.2k-fips PHP/5.4.16 (Stevetarzia)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "3.143.61.245"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "waffles.stevetarzia.com"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670622.552378,
+        "tls_versions": []
+    },
+    "tripadvisor.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "envoy (Tripadvisor)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670582.5351293,
+        "tls_versions": []
+    },
+    "twitter.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "tsa_b (Twitter)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670551.720427,
+        "tls_versions": []
+    },
+    "uchicago.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache (Uchicago)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "34.200.129.209"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "ec2-34-200-129-209.compute-1.amazonaws.com"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670611.3476348,
+        "tls_versions": []
+    },
+    "users.cs.northwestern.edu": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": false,
+        "http_server": "Apache (Users)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "165.124.180.20"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "web1.cs.northwestern.edu"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670604.1016102,
+        "tls_versions": []
+    },
+    "walmart.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": null,
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670592.8641713,
+        "tls_versions": []
+    },
+    "yelp.com": {
+        "geo_locations": [
+            "Chicago, United States",
+            "Denver, United States"
+        ],
+        "hsts": true,
+        "http_server": "Varnish (Yelp)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "151.101.68.116"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670568.9265068,
+        "tls_versions": []
+    },
+    "youtube.com": {
+        "geo_locations": [
+            "Chicago, United States"
+        ],
+        "hsts": true,
+        "http_server": "ESF (Youtube)",
+        "insecure_http": false,
+        "ipv4_addresses": [
+            "8.8.8.8",
+            "172.217.4.46"
+        ],
+        "ipv6_addresses": [],
+        "rdns_names": [
+            "dns.google",
+            "lga15s46-in-f14.1e100.net"
+        ],
+        "redirect_to_https": true,
+        "root_ca": null,
+        "rtt": null,
+        "scan_time": 1669670541.8759065,
+        "tls_versions": []
+    }
+}
