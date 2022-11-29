@@ -8,9 +8,6 @@ import socket
 import maxminddb
 import subprocess
 import requests as req
-from subprocess import TimeoutExpired
-
-
 
 
 def broken_website(status_code):
@@ -22,9 +19,9 @@ def process_geolocation(ip_addresses):
     result = []
     with maxminddb.open_database('GeoLite2-City.mmdb') as reader:
         for each in ip_addresses:
-            #print(each)
+            print(each)
             loc_dict = reader.get(each)
-            #print(loc_dict)
+            print(loc_dict)
             # print("location: ", loc_dict["location"])
             str = loc_dict["location"].get("time_zone").split("/")
             country = loc_dict["country"].get("names").get("en")
@@ -32,6 +29,7 @@ def process_geolocation(ip_addresses):
             if res not in result:
                 result.append(res)
     return result
+
 
 def get_domain_name(ip_addresses):
     result = []
@@ -45,15 +43,16 @@ def get_domain_name(ip_addresses):
 
 
 def process_root_ca(key):
-    cmd = ["openssl", "s_client", "-connect", key + ":443"]
     try:
+        cmd = ["openssl", "s_client", "-connect", key + ":443"]
         res = process_subprocess(cmd)
+        if res is None:
+            return
         for line in res.decode().split("\n"):
             if "i:O = " in line:
-                #print("line: ", line)
+                print("line: ", line)
                 return line.split(",")[0].split("=")[1].strip()
-    except Exception as caError:
-        #print(caError)
+    except:
         pass
 
 
@@ -69,19 +68,21 @@ def process_nmap(key):
 
 def process_subprocess(cmd):
     try:
-        result = subprocess.check_output(cmd, timeout=2, stderr=subprocess.STDOUT,shell=True)
-    except subprocess.TimeoutExpired and subprocess.CalledProcessError as exc:
-        #print("Command timed out: {}".format(exc))
+        result = subprocess.check_output(cmd, timeout=2, stderr=subprocess.STDOUT)
+    except subprocess.TimeoutExpired or subprocess.CalledProcessError as exc:
+        print("Command timed out: {}".format(exc))
         return None
     else:
-        #print("result", result)
+        print("result", result)
         return result
 
 
 def process_tls_version(key):
-    #import pdb
+    # import pdb
+    res = None
     try:
         result = process_nmap(key)
+
         res = []
         if "TLSv1.0:" in result.decode("utf-8"):
             res.append("TLSv1.0")
@@ -94,18 +95,18 @@ def process_tls_version(key):
         if "SSLv3" in result.decode("utf-8"):
             res.append("SSLv3")
     except Exception as errorTLS:
-        #print(errorTLS)
+        # print(errorTLS)
         pass
 
     try:
         open_ssl = process_openssl(key)
-        #pdb.set_trace()
+        # pdb.set_trace()
         if open_ssl is None:
             return res
         if "New, TLSv1.3" in open_ssl.decode():
             res.append("TLSv1.3")
-    except TimeoutExpired as errorSSL:
-        #print(errorSSL)
+    except Exception as errorSSL:
+        print(errorSSL)
         pass
     return res
 
@@ -114,7 +115,7 @@ def process_hsts(link):
     try:
         req1 = req.get(link, timeout=3)
     except req.exceptions.SSLError and req.exceptions.ReadTimeout as error:
-        #print("doesn't have SSL working properly (%s)")
+        print("doesn't have SSL working properly (%s)")
         return False
     if 'strict-transport-security' in req1.headers:
         return True
@@ -153,14 +154,13 @@ def process_nslookup(key, record_type):
     result = None
     try:
         result = subprocess.check_output(["nslookup", record_type, key, "8.8.8.8"],
-                                         timeout=10, stderr=subprocess.STDOUT,shell=True).decode("utf-8")
+                                         timeout=2, stderr=subprocess.STDOUT).decode("utf-8")
     except subprocess.TimeoutExpired as exc:
         print("Command timed out: {}".format(exc))
         return []
-
     # print(result)
     parts = result.split("\n\n")
-    #print(parts)
+    print(parts)
     addrs = []
     for part in parts:
         if "Non-authoritative" not in part:
@@ -176,25 +176,25 @@ def process_nslookup(key, record_type):
                     addrs.append(line.split(" ")[3].strip())
 
     return addrs
-def tcpConnection(ip,port):
-    cmd = 'sh -c "time echo -e \'\\x1dclose\\x0d\' |timeout 2 telnet ' + ip + ' ' + port + '"'
-    return connect(cmd)
+
+
 def connect(cmd):
     try:
         result = subprocess.check_output(cmd, timeout=2, stderr=subprocess.STDOUT, shell=True)
-        print("RTTresult", result)
-        return result
     except subprocess.TimeoutExpired and subprocess.CalledProcessError as exc:
-        #print("Command timed out: {}".format(exc))
+        print("Command timed out: {}".format(exc))
         return None
+    else:
+        print("result", result)
+        return result
 
-def getRTT(ip,port,update=False):
+
+def getRTT(ip, port, update=False):
     low = -99999999
     high = 99999999
     t = math.inf
     try:
-        res = tcpConnection(ip,port).decode("utf-8")
-        print("RTT "+res+"\n")
+        res = tcpConnection(ip, port).decode("utf-8")
         if res is not None:
             for one in res.split("\n\n"):
                 if "real" in one:
@@ -205,20 +205,21 @@ def getRTT(ip,port,update=False):
             return t
     except:
         if update is False:
-            # 443 default
-            for i in ["22","80"]:
-                t = getRTT(ip,i, True)
-                if t!=math.inf:
+            for i in ["22", "80", "443"]:
+                t = getRTT(ip, i, True)
+                if t != math.inf:
                     return t
         return None
+
+
 def rangeRTT(websites):
     res = []
     for w in websites:
-        one = getRTT(w,"443")
+        one = getRTT(w, "443")
         if one:
             res.append(one)
     if len(res) == 0:
-        return None
+        return res
     if len(res) == 1:
         res.append(res[0])
         res.append(res[0])
@@ -264,9 +265,9 @@ def scaner_input_file(file_name, output):
     f.close()
 
 
-
-
-
+def tcpConnection(ip, port):
+    cmd = ['sh -c "time echo -e \'\\x1dclose\\x0d\' |timeout 2 telnet ' + ip + ' ' + port + '"']
+    return connect(cmd)
 
 
 if __name__ == '__main__':
@@ -279,12 +280,13 @@ if __name__ == '__main__':
     output = sys.argv[2]
     scaner_input_file(file_name, output)
     # check all kinds of command line
-    # ipv6_addrs = process_nslookup("amazon.com", "-type=AAAA")
-    # print(ipv6_addrs)
+    #ipv6_addrs = process_nslookup("amazon.com", "-type=A")
+    #print(ipv6_addrs)
     # print("res: ", process_redirect_https("http://tripadvisor.com", 1))
     # print(has_hsts("https://tripadvisor.com"))
     # res = process_tls_version("cloudflare.com")
     # print("res: ", res)
     #print(process_root_ca("stevetarzia.com"))
-    #print(get_domain_name(["142.250.191.110"]))
-    #print(process_geolocation(["142.250.191.110"]))
+    # print(get_domain_name(["142.250.191.110"]))
+    # print(process_geolocation(["142.250.191.110"]))
+    # print(rangeRTT(["142.250.191.110"]))
